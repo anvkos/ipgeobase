@@ -24,7 +24,14 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+```ruby
+ip_meta = Ipgeobase.lookup('77.88.55.55')
+ip_meta.city # Moscow
+ip_meta.country # Russia
+ip_meta.countryCode # RU
+ip_meta.lat # 55.7332
+ip_meta.lon # 37.5833
+```
 
 ## Development
 
