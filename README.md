@@ -1,5 +1,4 @@
-![CI status](https://github.com/anvkos/ipgeobase/actions/workflows/master.yml/badge.svg)
-[![Ruby](https://github.com/anvkos/ipgeobase/actions/workflows/main.yml/badge.svg?event=status)](https://github.com/anvkos/ipgeobase/actions/workflows/main.yml)
+[![Ruby](https://github.com/anvkos/ipgeobase/actions/workflows/main.yml/badge.svg?branch=main&event=push)](https://github.com/anvkos/ipgeobase/actions/workflows/main.yml)
 
 # Ipgeobase
 
