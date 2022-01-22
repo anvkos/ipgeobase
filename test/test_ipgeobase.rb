@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require "test_helper"
+require 'test_helper'
 
 class TestIpgeobase < Minitest::Test
   def test_that_it_has_a_version_number
@@ -12,7 +12,7 @@ class TestIpgeobase < Minitest::Test
     expected_attributes = {
       city: 'Antalya',
       country: 'Turkey',
-      countryCode: 'TR',
+      country_code: 'TR',
       lat: '36.9094',
       lon: '30.6946'
     }
@@ -43,7 +43,7 @@ class TestIpgeobase < Minitest::Test
 
     assert_equal expected_attributes[:city], ip_meta.city
     assert_equal expected_attributes[:country], ip_meta.country
-    assert_equal expected_attributes[:countryCode], ip_meta.countryCode
+    assert_equal expected_attributes[:country_code], ip_meta.country_code
     assert_equal expected_attributes[:lat], ip_meta.lat
     assert_equal expected_attributes[:lon], ip_meta.lon
   end
@@ -53,7 +53,7 @@ class TestIpgeobase < Minitest::Test
     expected_attributes = {
       city: 'Ashburn',
       country: 'United States',
-      countryCode: 'US',
+      country_code: 'US',
       lat: '39.03',
       lon: '-77.5'
     }
@@ -83,7 +83,7 @@ class TestIpgeobase < Minitest::Test
 
     assert_equal expected_attributes[:city], ip_meta.city
     assert_equal expected_attributes[:country], ip_meta.country
-    assert_equal expected_attributes[:countryCode], ip_meta.countryCode
+    assert_equal expected_attributes[:country_code], ip_meta.country_code
     assert_equal expected_attributes[:lat], ip_meta.lat
     assert_equal expected_attributes[:lon], ip_meta.lon
   end
@@ -91,13 +91,14 @@ class TestIpgeobase < Minitest::Test
   protected
 
   def stub_test_request(url, body)
-    stub_request(:get, url).
-      with(
+    stub_request(:get, url)
+      .with(
         headers: {
-        'Accept'=>'*/*',
-        'Accept-Encoding'=>'gzip;q=1.0,deflate;q=0.6,identity;q=0.3',
-        'User-Agent'=>'Ruby'
-        }).
-      to_return(status: 200, body: body, headers: {})
+          'Accept' => '*/*',
+          'Accept-Encoding' => 'gzip;q=1.0,deflate;q=0.6,identity;q=0.3',
+          'User-Agent' => 'Ruby'
+        }
+      )
+      .to_return(status: 200, body: body, headers: {})
   end
 end
