@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<query>
+  <status>success</status>
+  <country>Turkey</country>
+  <countryCode>TR</countryCode>
+  <region>07</region>
+  <regionName>Antalya</regionName>
+  <city>Antalya</city>
+  <zip>27500</zip>
+  <lat>36.9094</lat>
+  <lon>30.6946</lon>
+  <timezone>Europe/Istanbul</timezone>
+  <isp>Fibim Fibernet GSM Sanayi VE Ticaret Anonim Sirketi</isp>
+  <org>Fibim Fibernet GSM Sanayi VE Ticaret Anonim Sirketi</org>
+  <as>AS213145 FIBIM FIBERNET GSM SANAYI VE TICARET ANONIM SIRKETI</as>
+  <query>185.117.121.99</query>
+</query>

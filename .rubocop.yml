@@ -14,8 +14,8 @@ Style/StringLiteralsInInterpolation:
   EnforcedStyle: double_quotes
 
 Layout/LineLength:
-  Enabled: false
-  # Max: 120
+  Enabled: true
+  Max: 120
 
 Metrics/AbcSize:
   Enabled: false

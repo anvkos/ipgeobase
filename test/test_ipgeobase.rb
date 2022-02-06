@@ -16,26 +16,7 @@ class TestIpgeobase < Minitest::Test
       lat: '36.9094',
       lon: '30.6946'
     }
-
-    body = <<~HEREDOC
-      <?xml version="1.0" encoding="UTF-8"?>
-      <query>
-        <status>success</status>
-        <country>Turkey</country>
-        <countryCode>TR</countryCode>
-        <region>07</region>
-        <regionName>Antalya</regionName>
-        <city>Antalya</city>
-        <zip>27500</zip>
-        <lat>36.9094</lat>
-        <lon>30.6946</lon>
-        <timezone>Europe/Istanbul</timezone>
-        <isp>Fibim Fibernet GSM Sanayi VE Ticaret Anonim Sirketi</isp>
-        <org>Fibim Fibernet GSM Sanayi VE Ticaret Anonim Sirketi</org>
-        <as>AS213145 FIBIM FIBERNET GSM SANAYI VE TICARET ANONIM SIRKETI</as>
-        <query>185.117.121.99</query>
-      </query>
-    HEREDOC
+    body = read_fixture_file("#{ip}.xml")
     url = "http://ip-api.com/xml/#{ip}"
     stub_test_request(url, body)
 
@@ -57,25 +38,7 @@ class TestIpgeobase < Minitest::Test
       lat: '39.03',
       lon: '-77.5'
     }
-    body = <<~HEREDOC
-      <?xml version="1.0" encoding="UTF-8"?>
-      <query>
-        <status>success</status>
-        <country>United States</country>
-        <countryCode>US</countryCode>
-        <region>VA</region>
-        <regionName>Virginia</regionName>
-        <city>Ashburn</city>
-        <zip>20149</zip>
-        <lat>39.03</lat>
-        <lon>-77.5</lon>
-        <timezone>America/New_York</timezone>
-        <isp>Google LLC</isp>
-        <org>Google Public DNS</org>
-        <as>AS15169 Google LLC</as>
-        <query>8.8.8.8</query>
-      </query>
-    HEREDOC
+    body = read_fixture_file("#{ip}.xml")
     url = "http://ip-api.com/xml/#{ip}"
     stub_test_request(url, body)
 
