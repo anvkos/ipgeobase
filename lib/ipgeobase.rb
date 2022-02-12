@@ -2,8 +2,8 @@
 
 require 'net/http'
 require 'addressable/uri'
-require 'happymapper'
 require_relative 'ipgeobase/version'
+require_relative 'ipgeobase/ip_meta'
 
 module Ipgeobase
   class Error < StandardError; end
@@ -14,6 +14,6 @@ module Ipgeobase
     res = Net::HTTP.get_response(uri)
     return nil unless res.is_a?(Net::HTTPSuccess)
 
-    HappyMapper.parse(res.body)
+    IpMeta.parse(res.body)
   end
 end
