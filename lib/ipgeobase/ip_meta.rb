@@ -10,7 +10,7 @@ module Ipgeobase
     element :city, String, tag: 'city'
     element :country, String, tag: 'country'
     element :country_code, String, tag: 'countryCode'
-    element :lat, String, tag: 'lat'
-    element :lon, String, tag: 'lon'
+    element :lat, Float, tag: 'lat'
+    element :lon, Float, tag: 'lon'
   end
 end

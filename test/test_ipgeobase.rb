@@ -13,8 +13,8 @@ class TestIpgeobase < Minitest::Test
       city: 'Antalya',
       country: 'Turkey',
       country_code: 'TR',
-      lat: '36.9094',
-      lon: '30.6946'
+      lat: 36.9094,
+      lon: 30.6946
     }
     body = read_fixture_file("#{ip}.xml")
     url = "http://ip-api.com/xml/#{ip}"
@@ -35,8 +35,8 @@ class TestIpgeobase < Minitest::Test
       city: 'Ashburn',
       country: 'United States',
       country_code: 'US',
-      lat: '39.03',
-      lon: '-77.5'
+      lat: 39.03,
+      lon: -77.5
     }
     body = read_fixture_file("#{ip}.xml")
     url = "http://ip-api.com/xml/#{ip}"
